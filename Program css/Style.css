@@ -1,0 +1,15 @@
+
+body {
+    background: linear-gradient(135deg,  #3bdfdf,#032c2c,#1a5f0b,#03a126,#dceb08,#0813eb84,#3bdfdf,#032c2c,#3bdfdf);
+    background-size: 10000% 1000%;
+    animation: rainbowBg 20s ease infinite;
+    font-family: Arial, sans-serif;
+    margin: 30px;
+    color: #000;
+}
+
+@keyframes rainbowBg {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
