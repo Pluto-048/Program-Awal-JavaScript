@@ -4,7 +4,7 @@ body {
     justify-content:center;
     align-items:center;
     width:100%;
-    min-height: 100vh;
+    min-height: 50vh;
     margin:0;
     padding:0;
     background: linear-gradient(to right,  #abd8d7,rgb(92, 164, 184));
@@ -72,7 +72,9 @@ body {
     font-weight: bold;
     border-radius: 5px;
     cursor: pointer;
-    
+    box-shadow: 5px 7px 3px #1d2828;
+    transition:transform 0.3s ease;
+    transform-origin:center;
     /* 1. Kunci konteks posisi & stacking z-index */
     position: relative;
     display: inline-block;
@@ -95,12 +97,15 @@ body {
     background-color: #9b59b6;
     transition: width 0.3s ease;
     z-index: -1;
+    transform:scale(1.1);
 }
 
 .Button-1:hover::after {
   width: 100%;
+  transform:scale(1.1);
 }
 
 .Button-1:hover {
   color: white;
+  transform:scale(1.1);
 }
