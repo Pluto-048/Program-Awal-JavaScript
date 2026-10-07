@@ -10,11 +10,12 @@ body {
     background: linear-gradient(to right,  #abd8d7,rgb(92, 164, 184));
 }
 .Tampilan-1{
+    width:50%;
     display:flex;
     flex-direction:column;
     align-items: flex-start;    /* Mendorong semua isi ke sisi KANAN */
     padding:50px 100px 50px 40px;
-    margin:0;
+    margin:70px;
     background:linear-gradient(to right,rgb(181, 146, 146),rgb(64, 159, 197));
     border-radius:8px;
     box-shadow: 8px 7px 4px  rgb(46, 45, 45) ;
