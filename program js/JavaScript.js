@@ -30,7 +30,7 @@ function Tampilan() {
   const btn = document.createElement("button");
   btn.className = "Button-1";
   btn.textContent = "Simpan Pilihan ";
-  btn.onclick = halaman2, SimpanPilihan;
+  btn.onclick = SimpanPilihan;
   Ganti.appendChild(btn);
 }
 
@@ -40,9 +40,21 @@ function halaman3() {
 }
 
 function SimpanPilihan() {
+    const jumlahPilihan =document.getElementById("Input-3").value;
     arrayPilihan=[];
-    for (let i = 0; i < juumlahPilihan;i++ ) {
-        const inputanUser = document.getElementById("Pilihan"+i).value.trim();
+    for (let i = 0; i < jumlahPilihan; i++) {
+      const inputanUser = document.getElementById("Pilihan" + i).value.trim();
+      if(inputanUser===""){
+          alert("Belum Memasukan Data Pilihan ke "+(i+1));
+          input.focus();
+          return;
+        }
         arrayPilihan.push(inputanUser);
+
     }
+    if(arrayPilihan=""){
+
+    }
+    alert("Data Berhasil Di Simpan");
+    halaman2();
 }
