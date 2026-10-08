@@ -1,7 +1,10 @@
 document.getElementById("lanjut").addEventListener("click", Tampilan);
+const arrayPilihan=[];
+
 function halaman2() {
   document.getElementById("halaman1").style.display = "none";
   document.getElementById("halaman2").style.display = "block";
+  PilihanRadioDrop();
 }
 function Tampilan() {
   document.getElementById("lanjut").remove();
@@ -34,27 +37,38 @@ function Tampilan() {
   Ganti.appendChild(btn);
 }
 
-function halaman3() {
-  document.getElementById("halaman2").style.display = "none";
-  document.getElementById("halaman3").style.display = "block";
-}
-
 function SimpanPilihan() {
     const jumlahPilihan =document.getElementById("Input-3").value;
-    arrayPilihan=[];
     for (let i = 0; i < jumlahPilihan; i++) {
       const inputanUser = document.getElementById("Pilihan" + i).value.trim();
-      if(inputanUser===""){
-          alert("Belum Memasukan Data Pilihan ke "+(i+1));
-          input.focus();
-          return;
-        }
+      if (inputanUser === "") {
+        alert("Belum Memasukan Data Pilihan ke " + (i + 1));
+        document.getElementById("Pilihan"+i).focus();
+        return;
+      }
         arrayPilihan.push(inputanUser);
-
-    }
-    if(arrayPilihan=""){
-
     }
     alert("Data Berhasil Di Simpan");
     halaman2();
+}
+function PilihanRadioDrop(){
+  const halaman2 = document.getElementById("halaman2");
+  halaman2.innerHTML="";
+  for(let i=0;i<arrayPilihan.length;i++){
+    const div = document.createElement("div");
+    const radio = document.createElement("input");
+
+    radio.type="radio";
+    radio.name="Pilihan";
+    radio.value=arrayPilihan[i];
+    radio.id="radio"+i;
+
+    const label = document.createElement("label");
+    label.htmlFor="radio"+i;
+    label.textContent=arrayPilihan[i];
+    div.appendChild(radio);
+    div.appendChild(label);
+
+    halaman2.appendChild(div);
+  }
 }
