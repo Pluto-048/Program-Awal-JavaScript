@@ -52,8 +52,8 @@ function SimpanPilihan() {
     halaman2();
 }
 function PilihanRadioDrop(){
-  const halaman2 = document.getElementById("halaman2");
-  halaman2.innerHTML="";
+  const ganti = document.getElementById("tampilanRadDrop");
+  ganti.innerHTML="";
   for(let i=0;i<arrayPilihan.length;i++){
     const div = document.createElement("div");
     const radio = document.createElement("input");
@@ -69,6 +69,6 @@ function PilihanRadioDrop(){
     div.appendChild(radio);
     div.appendChild(label);
 
-    halaman2.appendChild(div);
+    ganti.appendChild(div);
   }
 }
