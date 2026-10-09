@@ -52,8 +52,10 @@ function SimpanPilihan() {
     halaman2();
 }
 function PilihanRadioDrop(){
-  const ganti = document.getElementById("tampilanRadDrop");
-  ganti.innerHTML="";
+  const gantiRad = document.getElementById("tampilanRad");
+  gantiRad.innerHTML = "";
+  const gantiH3 =document.getElementById("daftar");
+  gantiH3.innerHTML="<b>Memilih Satu Pilihan</b>"
   for(let i=0;i<arrayPilihan.length;i++){
     const div = document.createElement("div");
     const radio = document.createElement("input");
@@ -69,6 +71,20 @@ function PilihanRadioDrop(){
     div.appendChild(radio);
     div.appendChild(label);
 
-    ganti.appendChild(div);
+    gantiRad.appendChild(div);
+  }
+  const gantiDrop = document.getElementById("tampilkanDrop");
+  gantiDrop.innerHTML="";
+  const select = document.createElement("select");
+  select.id="dropPilihan";
+  for(let i=0;i<arrayPilihan.length;i++){
+    const div = document.createElement("div");
+    const pilihan = document.createElement("option");
+    pilihan.value=arrayPilihan[i];
+    pilihan.textContent=arrayPilihan[i];
+
+    select.appendChild(pilihan);
+    div.appendChild(select);
+    gantiDrop.appendChild(div);
   }
 }

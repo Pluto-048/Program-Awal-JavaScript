@@ -5,7 +5,6 @@ body {
     flex-direction: column;
     align-items:center;
     width:100%;
-    min-height: 50vh;
     margin:0;
     padding:0;
     background: linear-gradient(to right,  #abd8d7,rgb(92, 164, 184));
@@ -37,8 +36,10 @@ h4{
     display:flex;
     flex-direction:column;
     align-items:stretch;    /* Mendorong semua isi ke sisi KANAN */
-    padding:50px;
-    margin:50px;
+    padding:0px 45px;
+    padding-top:5px;
+    padding-bottom:25px;
+    margin-top:20px;
     background:linear-gradient(to right,rgb(181, 146, 146),rgb(64, 159, 197));
     border-radius:8px;
     box-shadow: 8px 7px 4px  rgb(46, 45, 45) ;
