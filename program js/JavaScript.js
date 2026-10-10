@@ -110,5 +110,20 @@ function halaman3(){
 }
 
 function MasukanEmail(){
+  const gantiE = document.getElementById("tampilanEmail");
+  gantiE.innerHTML="";
+    const div = document.createElement("div");
+    const label = document.createElement("label");
+    const input = document.createElement("input");
 
+    label.textContent ="Email Anda : ";
+    label.className="Lb-1";
+    input.placeholder="Masukan Email Anda";
+    input.id="EmailUser";
+    input.className = "Input-1";
+    input.type="email";
+
+    div.appendChild(label);
+    div.appendChild(input);
+    gantiE.appendChild(div);
 }
