@@ -139,6 +139,6 @@ h4{
 #halaman1{
     display:block;
 }
-#halaman2{
+#halaman2,#halaman3{
     display:none;
 }
