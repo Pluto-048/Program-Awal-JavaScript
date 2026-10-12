@@ -55,7 +55,7 @@ function Tampilan() {
 }
 
 function SimpanPilihan() {
-  const juumlahPilihan = document.getElementById("Input-3").value;
+  const juumlahPilihan = Number(document.getElementById("Input-3").value);
   for (let i = 0; i < juumlahPilihan; i++) {
     const inputanUser = document.getElementById("Pilihan" + i).value.trim();
     if (inputanUser === "") {
